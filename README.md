@@ -25,7 +25,3 @@ streamlit run streamlit_app.py
 ```
 
 The app should be available at http://localhost:8501
-
-```
-
-```
