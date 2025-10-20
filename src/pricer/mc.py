@@ -16,8 +16,14 @@ def price_option(
 
     S_T = S0 * np.exp(T * (r - q - 0.5 * (sigma**2)) + sigma * dW_T)
 
-    disc = np.exp(-r * T)  # Discount back by the risk free rate
-    return disc * np.maximum(S_T - K, 0).mean()
+    payoffs = np.maximum(S_T - K, 0)
+    disc = np.exp(-r * T)
+    discPay = disc * payoffs  # Discount back by the risk free rate
+
+    SE = np.std(discPay, ddof=1) / np.sqrt(len(payoffs))
+    CI = 1.96 * SE
+
+    return [disc * payoffs.mean(), SE, CI]
 
 
 def price_option_black(

@@ -3,3 +3,4 @@ numpy
 matplotlib
 qbstyles
 seaborn
+plotly
