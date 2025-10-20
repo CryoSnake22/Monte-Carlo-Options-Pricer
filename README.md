@@ -25,3 +25,11 @@ streamlit run streamlit_app.py
 ```
 
 The app should be available at http://localhost:8501
+
+## Features
+
+- Simulates stock price paths with GBM
+- Monte Carlo option pricing
+- Black–Scholes comparison
+- Interactive sliders for parameters
+- Confidence Intervals and errors
