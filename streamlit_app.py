@@ -41,7 +41,7 @@ q = st.sidebar.number_input(
     "Yearly Dividends (q)", 0.00, 0.5, 0.00, step=0.005, format="%.4f"
 )
 col4, col5 = st.columns(2)
-n_paths = st.sidebar.slider("Paths", 50, 50_000, 5000, step=1_000)
+n_paths = st.sidebar.slider("Paths", 50, 50_000, 10000, step=1_000)
 n_steps = st.sidebar.slider("Steps per path", 50, 1000, 252, step=50)
 
 dt = T / n_steps
